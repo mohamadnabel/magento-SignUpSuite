@@ -1,0 +1,8 @@
+https://magento.softwaretestingboard.com/
+1- create a sign up process 
+2- create login process 
+3- go to the section of women == > top ==> tees 
+add the first three items
+4- then make assertion that the total items in the cart are 3 and create one assert that the price is the sume of the three items. 
+
+5- after that add any random item from men section and check the price 
