@@ -1,6 +1,6 @@
 package myTestCases;
 
-import java.time.Duration;
+import static org.testng.Assert.assertEquals;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -18,13 +18,13 @@ public class Testcases extends Parameters {
 	@BeforeTest
 	public void mySetupTest() {
 		driver.get(URL);
+		driver.manage().window().maximize();
+//		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+
 	}
 
 	@Test(priority = 1, enabled = true)
-	public void myTest() {
-
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
-		driver.manage().window().maximize();
+	public void myTest() throws InterruptedException {
 
 		WebElement signUp = driver
 				.findElement(By.cssSelector("header[class='page-header'] li:nth-child(3) a:nth-child(1)"));
@@ -54,5 +54,32 @@ public class Testcases extends Parameters {
 		WebElement submitBtn = driver.findElement(By.cssSelector("button[title='Create an Account']"));
 
 		submitBtn.click();
+
+		Thread.sleep(3000);
+
+		WebElement signUpMsg = driver.findElement(By.cssSelector(".message-success.success.message"));
+
+		assertEquals(signUpMsg.isDisplayed(), true);
+	}
+
+	@Test(priority = 2, enabled = true)
+	public void loginTest() throws InterruptedException {
+
+		driver.findElement(By.cssSelector("div[class='panel header'] button[type='button']")).click();
+		Thread.sleep(1000);
+		driver.findElement(By.cssSelector("div[aria-hidden='false'] li[data-label='or'] a")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.cssSelector("div[class='panel header'] li[data-label='or'] a")).click();
+		Thread.sleep(3000);
+
+		WebElement loginEmailInput = driver.findElement(By.id("email"));
+		WebElement loginpassInput = driver.findElement(By.id("pass"));
+		WebElement loginSubmmitBtn = driver.findElement(By.id("send2"));
+
+		loginEmailInput
+				.sendKeys(randoomFirstName[randFName] + randoomLastName[randLName] + randomNumber + "@gmail.com");
+		loginpassInput.sendKeys(randoomFirstName[randFName] + randoomLastName[randLName] + randomNumber + "@");
+		loginSubmmitBtn.click();
+
 	}
 }

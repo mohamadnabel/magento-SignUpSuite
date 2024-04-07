@@ -3,7 +3,7 @@ package parameter;
 import java.util.Random;
 
 public class Parameters {
-	protected String URL = "https://magento.softwaretestingboard.com/";
+	protected String URL = "https://magento.softwaretestingboard.com";
 
 	protected String[] randoomFirstName = { "mohammad", "ahmad", "yousef", "Esaa", "rama" };
 

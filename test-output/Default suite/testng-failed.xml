@@ -5,7 +5,7 @@
     <classes>
       <class name="myTestCases.Testcases">
         <methods>
-          <include name="myTest"/>
+          <include name="loginTest"/>
           <include name="mySetupTest"/>
         </methods>
       </class> <!-- myTestCases.Testcases -->
