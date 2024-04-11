@@ -9,9 +9,9 @@ public class Parameters {
 
 	protected String[] randoomLastName = { "mahmoud", "yazan", "basell", "kallel", "omran" };
 
-	Random rand = new Random();
+	protected Random rand = new Random();
 
-	protected int randomNumber = rand.nextInt(20);
+	protected int randomNumber = rand.nextInt(99);
 
 	protected int randFName = rand.nextInt(randoomFirstName.length);
 	protected int randLName = rand.nextInt(randoomLastName.length);
