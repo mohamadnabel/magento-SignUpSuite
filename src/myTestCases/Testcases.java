@@ -4,6 +4,7 @@ import static org.testng.Assert.assertEquals;
 
 import java.time.Duration;
 import java.util.List;
+import java.util.Random;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -12,6 +13,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+import org.testng.asserts.Assertion;
 
 import parameter.Parameters;
 
@@ -28,7 +30,7 @@ public class Testcases extends Parameters {
 
 	}
 
-	@Test(priority = 1, enabled = false)
+	@Test(priority = 1, enabled = true)
 	public void myTest() throws InterruptedException {
 
 		WebElement signUp = driver
@@ -67,7 +69,7 @@ public class Testcases extends Parameters {
 		assertEquals(signUpMsg.getText(), "Thank you for registering with Main Website Store.");
 	}
 
-	@Test(priority = 2, enabled = false)
+	@Test(priority = 2, enabled = true)
 	public void loginTest() throws InterruptedException {
 
 		driver.findElement(By.cssSelector("div[class='panel header'] button[type='button']")).click();
@@ -105,7 +107,7 @@ public class Testcases extends Parameters {
 
 	}
 
-	@Test(priority = 3)
+	@Test(priority = 3, enabled = true)
 	public void addFirstThreeItems() throws InterruptedException {
 
 		WebElement conteninerItem = driver.findElement(By.cssSelector(".products.list.items"));
@@ -115,11 +117,11 @@ public class Testcases extends Parameters {
 		for (int i = 0; i < 3; i++) {
 			System.out.println(i);
 
-			Thread.sleep(2000);
+			Thread.sleep(1000);
 
 			action.moveToElement((WebElement) itemBox.get(i)).perform();
 
-			Thread.sleep(2000);
+			Thread.sleep(1000);
 
 			int countOfIndex = i + 1;
 
@@ -136,12 +138,70 @@ public class Testcases extends Parameters {
 
 			sizeBox.get(randomSize).click();
 			colorBox.get(randomColor).click();
-			Thread.sleep(1000);
+			Thread.sleep(2000);
 
 			driver.findElement(By.xpath("(//button[@title='Add to Cart'])[" + countOfIndex + "]")).click();
-			Thread.sleep(1000);
+			Thread.sleep(2000);
 
 		}
 
+	}
+
+	@Test(priority = 4, enabled = true)
+	public void assertionForTotalItem() throws InterruptedException {
+
+		Thread.sleep(2000);
+
+		WebElement countOfItemInCard = driver.findElement(By.cssSelector(".counter-number"));
+
+		String countOfItem = countOfItemInCard.getText();
+
+		int countOfItemInteger = Integer.parseInt(countOfItem);
+
+		assertEquals(countOfItemInteger, 3);
+		Thread.sleep(2000);
+
+	}
+
+	@Test(priority = 5, enabled = true)
+	public void checkTotalPrice() throws InterruptedException {
+		driver.findElement(By.xpath("//a[@class='action showcart']")).click();
+//		driver.findElement(By.cssSelector("#top-cart-btn-checkout")).click();
+		Thread.sleep(2000);
+
+	}
+
+	@Test(priority = 5, enabled = false, description = "")
+	public void checkSumPriceItemInCard() throws InterruptedException {
+		Thread.sleep(2000);
+
+		WebElement numOfItemPrice = driver.findElement(By.xpath("//span[contains(text(),'$190.00')]"));
+		String itemNum = numOfItemPrice.getText();
+		int countOfNum = Integer.parseInt(itemNum);
+		System.out.println(countOfNum);
+	}
+
+	@Test(enabled = false)
+	public void testtt() throws InterruptedException {
+		driver.get("https://www.saucedemo.com/inventory.html");
+
+		driver.findElement(By.id("user-name")).sendKeys("standard_user");
+		driver.findElement(By.id("password")).sendKeys("secret_sauce");
+		driver.findElement(By.id("login-button")).click();
+
+		WebElement container = driver.findElement(By.className("inventory_list"));
+		List<WebElement> product = container.findElements(By.tagName("button"));
+
+		for (int i = 0; i < 3; i++) {
+
+			int randomNum = rand.nextInt(product.size());
+
+			product.get(randomNum).click();
+
+			driver.findElement(By.id("add-to-cart-sauce-labs-backpack")).click();
+
+			Thread.sleep(2000);
+
+		}
 	}
 }

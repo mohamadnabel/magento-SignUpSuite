@@ -1,24 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="2" total="4" passed="2" failed="0" skipped="0">
+<testng-results ignored="2" total="8" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-04-11T05:01:21 AST" name="Default suite" finished-at="2024-04-11T05:01:51 AST" duration-ms="29972">
+  <suite started-at="2024-04-21T21:36:57 AST" name="Default suite" finished-at="2024-04-21T21:38:03 AST" duration-ms="66011">
     <groups>
     </groups>
-    <test started-at="2024-04-11T05:01:21 AST" name="Default test" finished-at="2024-04-11T05:01:51 AST" duration-ms="29972">
+    <test started-at="2024-04-21T21:36:57 AST" name="Default test" finished-at="2024-04-21T21:38:03 AST" duration-ms="66011">
       <class name="myTestCases.Testcases">
-        <test-method is-config="true" signature="mySetupTest()[pri:0, instance:myTestCases.Testcases@42721fe]" started-at="2024-04-11T05:01:21 AST" name="mySetupTest" finished-at="2024-04-11T05:01:27 AST" duration-ms="6143" status="PASS">
+        <test-method is-config="true" signature="mySetupTest()[pri:0, instance:myTestCases.Testcases@18920cc]" started-at="2024-04-21T21:36:57 AST" name="mySetupTest" finished-at="2024-04-21T21:37:04 AST" duration-ms="6553" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- mySetupTest -->
-        <test-method signature="navToTees()[pri:2, instance:myTestCases.Testcases@42721fe]" started-at="2024-04-11T05:01:27 AST" name="navToTees" finished-at="2024-04-11T05:01:32 AST" duration-ms="4429" status="PASS">
+        <test-method signature="myTest()[pri:1, instance:myTestCases.Testcases@18920cc]" started-at="2024-04-21T21:37:04 AST" name="myTest" finished-at="2024-04-21T21:37:14 AST" duration-ms="9935" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- myTest -->
+        <test-method signature="loginTest()[pri:2, instance:myTestCases.Testcases@18920cc]" started-at="2024-04-21T21:37:14 AST" name="loginTest" finished-at="2024-04-21T21:37:34 AST" duration-ms="19731" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method signature="navToTees()[pri:2, instance:myTestCases.Testcases@18920cc]" started-at="2024-04-21T21:37:34 AST" name="navToTees" finished-at="2024-04-21T21:37:38 AST" duration-ms="4211" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- navToTees -->
-        <test-method signature="addFirstThreeItems()[pri:3, instance:myTestCases.Testcases@42721fe]" started-at="2024-04-11T05:01:32 AST" name="addFirstThreeItems" finished-at="2024-04-11T05:01:51 AST" duration-ms="19353" status="PASS">
+        <test-method signature="addFirstThreeItems()[pri:3, instance:myTestCases.Testcases@18920cc]" started-at="2024-04-21T21:37:38 AST" name="addFirstThreeItems" finished-at="2024-04-21T21:37:57 AST" duration-ms="19342" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addFirstThreeItems -->
+        <test-method signature="assertionForTotalItem()[pri:4, instance:myTestCases.Testcases@18920cc]" started-at="2024-04-21T21:37:57 AST" name="assertionForTotalItem" finished-at="2024-04-21T21:38:01 AST" duration-ms="4043" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- assertionForTotalItem -->
+        <test-method signature="checkTotalPrice()[pri:5, instance:myTestCases.Testcases@18920cc]" started-at="2024-04-21T21:38:01 AST" name="checkTotalPrice" finished-at="2024-04-21T21:38:03 AST" duration-ms="2127" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkTotalPrice -->
       </class> <!-- myTestCases.Testcases -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
