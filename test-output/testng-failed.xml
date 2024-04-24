@@ -5,10 +5,7 @@
     <classes>
       <class name="myTestCases.Testcases">
         <methods>
-          <include name="assertionForTotalItem"/>
-          <include name="addFirstThreeItems"/>
-          <include name="navToTees"/>
-          <include name="checkTotalPrice"/>
+          <include name="addOddNumberOfItem2"/>
           <include name="mySetupTest"/>
         </methods>
       </class> <!-- myTestCases.Testcases -->

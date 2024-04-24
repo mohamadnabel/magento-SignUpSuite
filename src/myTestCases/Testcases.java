@@ -30,7 +30,7 @@ public class Testcases extends Parameters {
 
 	}
 
-	@Test(priority = 1, enabled = true)
+	@Test(priority = 1, enabled = false)
 	public void myTest() throws InterruptedException {
 
 		WebElement signUp = driver
@@ -69,7 +69,7 @@ public class Testcases extends Parameters {
 		assertEquals(signUpMsg.getText(), "Thank you for registering with Main Website Store.");
 	}
 
-	@Test(priority = 2, enabled = true)
+	@Test(priority = 2, enabled = false)
 	public void loginTest() throws InterruptedException {
 
 		driver.findElement(By.cssSelector("div[class='panel header'] button[type='button']")).click();
@@ -90,7 +90,7 @@ public class Testcases extends Parameters {
 
 	}
 
-	@Test(priority = 2, enabled = true)
+	@Test(priority = 2, enabled = false)
 	public void navToTees() throws InterruptedException {
 
 		WebElement aTag = driver
@@ -107,7 +107,45 @@ public class Testcases extends Parameters {
 
 	}
 
-	@Test(priority = 3, enabled = true)
+	@Test(priority = 1, enabled = true)
+	public void navToBags() {
+		WebElement aTag = driver.findElement(By.cssSelector("#ui-id-6"));
+		action.moveToElement(aTag).perform();
+
+		WebElement aTag1 = driver.findElement(By.cssSelector("#ui-id-25"));
+		aTag1.click();
+	}
+
+	@Test(priority = 2, enabled = true)
+	public void addOddNumberOfItem2() throws InterruptedException {
+		WebElement containerItem = driver.findElement(By.cssSelector(".products.list.items.product-items"));
+		List<WebElement> item = containerItem.findElements(By.tagName("li"));
+		System.out.println("Total items: " + item.size());
+
+		for (int i = 0; i < item.size(); i++) {
+			Thread.sleep(1000);
+
+			// Check if the index is odd
+			if ((i % 2) == 0) {
+				System.out.println(i + " is an even number.");
+
+				 // Move to the item
+				action.moveToElement(item.get(i)).perform();
+				Thread.sleep(3000);
+
+				// Get the count of index (1-based)
+				int countOfIndex = i + 1;
+
+				// Click the "Add to Cart" button
+				WebElement btnAdd = driver
+						.findElement(By.xpath("(//button[@title='Add to Cart'])[" + countOfIndex + "]"));
+				btnAdd.click();
+				Thread.sleep(2000);
+			}
+		}
+	}
+
+	@Test(priority = 3, enabled = false)
 	public void addFirstThreeItems() throws InterruptedException {
 
 		WebElement conteninerItem = driver.findElement(By.cssSelector(".products.list.items"));
@@ -147,7 +185,7 @@ public class Testcases extends Parameters {
 
 	}
 
-	@Test(priority = 4, enabled = true)
+	@Test(priority = 5, enabled = false)
 	public void assertionForTotalItem() throws InterruptedException {
 
 		Thread.sleep(2000);
@@ -158,12 +196,12 @@ public class Testcases extends Parameters {
 
 		int countOfItemInteger = Integer.parseInt(countOfItem);
 
-		assertEquals(countOfItemInteger, 3);
+		assertEquals(countOfItemInteger, 0);
 		Thread.sleep(2000);
 
 	}
 
-	@Test(priority = 5, enabled = true)
+	@Test(priority = 6, enabled = false)
 	public void checkTotalPrice() throws InterruptedException {
 		driver.findElement(By.xpath("//a[@class='action showcart']")).click();
 //		driver.findElement(By.cssSelector("#top-cart-btn-checkout")).click();

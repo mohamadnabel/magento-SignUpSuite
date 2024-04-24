@@ -1,40 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="2" total="8" passed="6" failed="0" skipped="0">
+<testng-results ignored="8" total="10" passed="1" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-04-21T21:36:57 AST" name="Default suite" finished-at="2024-04-21T21:38:03 AST" duration-ms="66011">
+  <suite started-at="2024-04-25T01:50:56 AST" name="Default suite" finished-at="2024-04-25T01:51:13 AST" duration-ms="17202">
     <groups>
     </groups>
-    <test started-at="2024-04-21T21:36:57 AST" name="Default test" finished-at="2024-04-21T21:38:03 AST" duration-ms="66011">
+    <test started-at="2024-04-25T01:50:56 AST" name="Default test" finished-at="2024-04-25T01:51:13 AST" duration-ms="17202">
       <class name="myTestCases.Testcases">
-        <test-method is-config="true" signature="mySetupTest()[pri:0, instance:myTestCases.Testcases@18920cc]" started-at="2024-04-21T21:36:57 AST" name="mySetupTest" finished-at="2024-04-21T21:37:04 AST" duration-ms="6553" status="PASS">
+        <test-method is-config="true" signature="mySetupTest()[pri:0, instance:myTestCases.Testcases@39a8312f]" started-at="2024-04-25T01:50:56 AST" name="mySetupTest" finished-at="2024-04-25T01:51:00 AST" duration-ms="4606" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- mySetupTest -->
-        <test-method signature="myTest()[pri:1, instance:myTestCases.Testcases@18920cc]" started-at="2024-04-21T21:37:04 AST" name="myTest" finished-at="2024-04-21T21:37:14 AST" duration-ms="9935" status="PASS">
+        <test-method signature="navToBags()[pri:1, instance:myTestCases.Testcases@39a8312f]" started-at="2024-04-25T01:51:00 AST" name="navToBags" finished-at="2024-04-25T01:51:04 AST" duration-ms="3997" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- myTest -->
-        <test-method signature="loginTest()[pri:2, instance:myTestCases.Testcases@18920cc]" started-at="2024-04-21T21:37:14 AST" name="loginTest" finished-at="2024-04-21T21:37:34 AST" duration-ms="19731" status="PASS">
+        </test-method> <!-- navToBags -->
+        <test-method signature="addOddNumberOfItem2()[pri:2, instance:myTestCases.Testcases@39a8312f]" started-at="2024-04-25T01:51:04 AST" name="addOddNumberOfItem2" finished-at="2024-04-25T01:51:13 AST" duration-ms="8524" status="FAIL">
+          <exception class="org.openqa.selenium.StaleElementReferenceException">
+            <message>
+              <![CDATA[stale element reference: stale element not found
+  (Session info: chrome=124.0.6367.60)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: '4.19.1', revision: 'abe0ee07dc'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e695177764bcf933b7f59ecb9f20070b, actions {actions=[org.openqa.selenium.interactions.Sequence@22d6f11]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.60, chrome: {chromedriverVersion: 124.0.6367.78 (a087f2dd364d..., userDataDir: C:\Users\moham\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63213}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63213/devtoo..., se:cdpVersion: 124.0.6367.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e695177764bcf933b7f59ecb9f20070b]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
+  (Session info: chrome=124.0.6367.60)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: '4.19.1', revision: 'abe0ee07dc'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e695177764bcf933b7f59ecb9f20070b, actions {actions=[org.openqa.selenium.interactions.Sequence@22d6f11]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.60, chrome: {chromedriverVersion: 124.0.6367.78 (a087f2dd364d..., userDataDir: C:\Users\moham\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63213}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63213/devtoo..., se:cdpVersion: 124.0.6367.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e695177764bcf933b7f59ecb9f20070b
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:604)
+at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:603)
+at org.openqa.selenium.interactions.Actions.perform(Actions.java:568)
+at myTestCases.Testcases.addOddNumberOfItem2(Testcases.java:133)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginTest -->
-        <test-method signature="navToTees()[pri:2, instance:myTestCases.Testcases@18920cc]" started-at="2024-04-21T21:37:34 AST" name="navToTees" finished-at="2024-04-21T21:37:38 AST" duration-ms="4211" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- navToTees -->
-        <test-method signature="addFirstThreeItems()[pri:3, instance:myTestCases.Testcases@18920cc]" started-at="2024-04-21T21:37:38 AST" name="addFirstThreeItems" finished-at="2024-04-21T21:37:57 AST" duration-ms="19342" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addFirstThreeItems -->
-        <test-method signature="assertionForTotalItem()[pri:4, instance:myTestCases.Testcases@18920cc]" started-at="2024-04-21T21:37:57 AST" name="assertionForTotalItem" finished-at="2024-04-21T21:38:01 AST" duration-ms="4043" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- assertionForTotalItem -->
-        <test-method signature="checkTotalPrice()[pri:5, instance:myTestCases.Testcases@18920cc]" started-at="2024-04-21T21:38:01 AST" name="checkTotalPrice" finished-at="2024-04-21T21:38:03 AST" duration-ms="2127" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkTotalPrice -->
+        </test-method> <!-- addOddNumberOfItem2 -->
       </class> <!-- myTestCases.Testcases -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
